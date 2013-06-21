@@ -1012,4 +1012,68 @@ img.alignright, img.right {margin: 0 0 1em 1.5em;}
 				
 			}
 			
+div#header-container, div#footer-container
+{
+overflow:hidden;
+}
+
+div#scroll
+{
+width:1220px;
+overflow:hidden;
+max-height:150px;
+padding-left:1px;
+}
+
+div#fake-scroll-container
+{
+width:1220px;
+overflow:hidden;
+position:relative;
+
+}
+
+div#y-fake-scroll
+{
+overflow-y:scroll; 
+overflow-x:hidden;
+background:transparent; 
+position:absolute;
+right:0;
+position:absolute;
+max-height:149px;
+top:31px;
+}
+
+div#x-fake-scroll
+{
+height:40px;
+margin-top:-23px;
+overflow-x:auto;
+overflow-y:hidden;
+margin-top:expression('0px');/* IE 7 fix*/
+height:expression('17px'); /* IE 7 fix*/
+}
+
+div#y-scroll
+{
+max-height:150px;
+overflow-y:auto;
+overflow-x:hidden;
+overflow:scroll;
+width:1010px;
+padding:0px 1px 1px 1px;
+}
+
+div#header-container
+{
+padding:1px 1px 0 1px;
+}
+
+div#footer-container
+{
+padding:0 1px;
+
+}
+
 

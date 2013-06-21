@@ -16,6 +16,7 @@ $mfCode = $this -> session -> userdata('fCode');
 		<!--script src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script-->
 		<script src="<?php echo base_url()?>js/js_libraries.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>js/style-table.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>js/script.js"></script>
 		
 		
 		<script>
@@ -457,10 +458,13 @@ $mfCode = $this -> session -> userdata('fCode');
 		<?php $this->load->view('segments/nav-public'); ?>
 
 		<div class="main form-container ui-widget" >
+		
              <?php echo $form; ?>
 			
 
 		</div>
+		
+
 
 		<!--footer-->
 		<?php $this->load->view('segments/footer'); ?>

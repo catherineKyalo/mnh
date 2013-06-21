@@ -87,6 +87,7 @@ class C_Load extends MY_Controller {
 		         <!--h3 align="center">COMMODITY, SUPPLIES AND EQUIPMENT ASSESSMENT</h3-->
 		         <div id="section-1" style="display:true">
 		          <p style="display:true" class="message success">SECTION 1</p>
+		          <div id="header-container">
 				<table class="centre" >
 
 		       <thead><th colspan="9">FACILITY INFORMATION</th></thead>
@@ -114,7 +115,8 @@ class C_Load extends MY_Controller {
 			</td>
 			
 			</tr>
-		
+		</div>
+		<div id="scroll">
 		</table>
 		<table class="centre">
 		<thead>
@@ -159,6 +161,7 @@ class C_Load extends MY_Controller {
 		</tr>
 
 	</table>
+	</div>
 	<table class="centre">
 	<thead>
 	<th colspan ="8"> DOES THIS FACILITY ROUTINELY CONDUCT DELIVERIES?</th> </thead>
@@ -578,6 +581,25 @@ class C_Load extends MY_Controller {
 		</tr>
         '.$this->suppliesUsageAndOutageSection.'
         </table>
+        
+		<table class="centre">
+		<thead><th colspan="3" style ="text-align:left">FACILITIES UNDER DISTRICT X </th><th colspan="4" style ="text-align:right">Search Facility &nbsp;&nbsp;&nbsp;&nbsp;
+		<input name="search" type="text"/></th></thead>
+		<tr><th>Facility Name</th><th>Facility Type</th><th>Facility Level</th><th> Owned By</th><th colspan="3"> Assesment Status</th></tr>
+		<tr><td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>Commodity</td>
+		<td>Equipment</td>
+		<td>Supplies</td>
+		</tr>
+		<tr><td>Daggo</td><td>type of Daggo</td><td>Daggo Level</td><td>Daggos Owner</td>
+		<td><input name="comStatus_'.$counter.'[]" type="checkbox" value="commodity survey Done " /></td>
+		<td><input name="equipStatus_'.$counter.'[]" type="checkbox" value="equipment survey Done " /></td>
+		<td><input name="supStatus_'.$counter.'[]" type="checkbox" value="status survey Done " /></td>
+		</tr>
+		</table>
         </div>
 		<div id="suppliesEquipment" class="buttonsPane">
 		<input title="To save" id="submit" class="awesome blue medium"  type="submit" name="post_form" value="Save and Go to the Next Section"/>				
@@ -587,6 +609,7 @@ class C_Load extends MY_Controller {
 		
 	</div>
 	</div><!--\.section-6-->
+
 	</form>';
 		$data['form'] = $this -> combined_form;
 		$data['form_id'] = 'form_dcah';
